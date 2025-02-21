@@ -22,7 +22,6 @@ return new class extends Migration
             $table->string('location');
             $table->string('contact_email');
             $table->string('contact_phone');
-            $table->enum('status', ['open', 'resolved'])->default('open');
             $table->timestamps();
         });
     }
