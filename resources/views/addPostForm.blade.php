@@ -15,8 +15,7 @@
         <form action="/" class="mb-8" method="post">
             @csrf
             <button class="px-4 py-2 rounded-lg flex items-center gap-2 text-white bg-[#7B76A1] hover:bg-[#746D01] transition duration-300">
-                <span class="text-xl"><--</span>
-                <span>Back</span>
+                <span class="text-xl"><--</span><span>Back</span>
             </button>
         </form>
     </header>
@@ -36,9 +35,19 @@
                     <textarea class="w-full p-2 border rounded-lg h-32" required></textarea>
                 </div>
 
-                <div>
-                    <label class="block text-[#342f25] mb-2">Photo</label>
-                    <input type="file" accept="image/*" class="w-full p-2">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-[#342f25] mb-2">Catégorie</label>
+                        <select class="w-full p-2 border rounded-lg bg-white">
+                            <option value="">Vétements</option>
+                            <option value="">Eléctroniques</option>
+                            <option value="">Objets</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[#342f25] mb-2">Photo</label>
+                        <input type="file" accept="image/*" class="w-full p-2 border rounded-lg bg-white">
+                    </div>
                 </div>
 
                 <div class="grid grid-cols-2 gap-4">
