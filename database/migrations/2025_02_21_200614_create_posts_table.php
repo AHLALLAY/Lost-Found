@@ -12,12 +12,11 @@ return new class extends Migration
     public function up() {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('title');
             $table->text('description');
             $table->string('photo')->nullable();
             $table->string('category');
-            $table->enum('lost_found', ['lost', 'found']);
+            $table->string('lost_found');
             $table->date('date');
             $table->string('location');
             $table->string('contact_email');
